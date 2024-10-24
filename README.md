@@ -6,6 +6,8 @@ v1.0.0
 
 W repozytorium znajduje się moja interpretacja tej gry, napisana przy użyciu `HTML`, `CSS`, `JavaScript` i `Node.js`.
 
+![Menu główne](public/assets/img/gallery/pic1.png)
+
 ### Wymagania
 Do uruchomienia wymagany jest zainstalowany ***Node.js***. Aby sprawdzić, czy Node.js jest zainstalowany na Twoim komputerze, w CMD lub PowerShell wpisz komendę:
 ```bash
@@ -33,6 +35,9 @@ node server.js
 ```
 
 ## Funkcje i cechy projektu
+
+![Ustawienia w grze](public/assets/img/gallery/pic2.png)
+
 - Gra Pong w nowym wydaniu,
 - Nowe elementy wizualne w tym szum VHS,
 - Efekty dźwiękowe,
@@ -48,6 +53,9 @@ node server.js
   - Graj bez limitu na punkty oraz ustaw swój własny próg na zwycięstwo.
 
 ## Sterowanie
+
+![Rozgrywka](public/assets/img/gallery/pic3.png)
+
 **Gracz 1 przyjmuje lewą część klawiatury:**
 - W - Przemieszczenie się w górę,
 - S - Przemieszczenie się w dół.
