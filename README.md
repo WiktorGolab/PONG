@@ -7,7 +7,7 @@ v1.0.0
 W repozytorium znajduje się moja interpretacja tej gry, napisana przy użyciu `HTML`, `CSS`, `JavaScript` i `Node.js`.
 
 ![Menu główne](public/assets/img/gallery/pic1.png)
-###### Rozdzielczość ekranu: 2560x1440
+###### Menu główne. Rozdzielczość ekranu: 2560x1440
 
 ### Wymagania
 Do uruchomienia wymagany jest zainstalowany ***Node.js***. Aby sprawdzić, czy Node.js jest zainstalowany na Twoim komputerze, w CMD lub PowerShell wpisz komendę:
@@ -38,6 +38,7 @@ node server.js
 ## Funkcje i cechy projektu
 
 ![Ustawienia w grze](public/assets/img/gallery/pic2.png)
+###### Ustawienia w grze. Rozdzielczość ekranu: 2560x1440
 
 - Gra Pong w nowym wydaniu,
 - Nowe elementy wizualne w tym szum VHS,
@@ -56,6 +57,7 @@ node server.js
 ## Sterowanie
 
 ![Rozgrywka](public/assets/img/gallery/pic3.png)
+###### Rozgrywka. Rozdzielczość ekranu: 2560x1440
 
 **Gracz 1 przyjmuje lewą część klawiatury:**
 - W - Przemieszczenie się w górę,
