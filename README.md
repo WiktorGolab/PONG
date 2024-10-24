@@ -7,6 +7,7 @@ v1.0.0
 W repozytorium znajduje się moja interpretacja tej gry, napisana przy użyciu `HTML`, `CSS`, `JavaScript` i `Node.js`.
 
 ![Menu główne](public/assets/img/gallery/pic1.png)
+###### Rozdzielczość ekranu: 2560x1440
 
 ### Wymagania
 Do uruchomienia wymagany jest zainstalowany ***Node.js***. Aby sprawdzić, czy Node.js jest zainstalowany na Twoim komputerze, w CMD lub PowerShell wpisz komendę:
