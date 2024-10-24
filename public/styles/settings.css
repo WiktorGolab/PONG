@@ -1,0 +1,124 @@
+.settingsContent {
+    position: absolute;
+    display: grid;
+    grid-column: 3px;
+    gap: 20px;
+    width: 800px;
+    align-items: center;
+}
+
+.settingsItem {
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+}
+
+.settingsItemContent {
+    position: relative;
+    display: grid;
+    gap: 0;
+}
+
+input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 200px;
+    height: 8px;
+    background: linear-gradient(to right, #fff 0%, #fff 50%, #808080 50%, #808080 100%); /* Gradient od lewej (biały) do prawej (szary) */
+    outline: none;
+    opacity: 0.8;
+    transition: background 0.3s; /* Płynne przejście koloru */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: transparent;
+}
+
+/* Aktualizacja tła w zależności od wartości suwaka */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+/* Styl dla input number */
+input[type="number"] {
+    font-family: VT323, monospace;
+    color: #fff; /* Biały kolor tekstu */
+    background-color: #000; /* Czarny background */
+    border: 1px solid #fff; /* Biała obwódka */
+    padding: 5px;
+    font-size: 20px;
+    width: 50px;
+}
+
+/* Styl dla checkbox */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff; /* Biała obwódka */
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #e9e9e9; /* Zaznaczony pełny biały kwadrat */
+}
+
+#acceptSettings {
+    font-family: VT323;
+    font-size: 30px;
+    background-color: black;   /* Czarny kolor tła */
+    color: white;              /* Biały kolor tekstu */
+    border: 2px solid white;   /* Biała ramka */
+    padding: 10px 20px;        /* Odstępy wewnętrzne */
+    font-size: 16px;           /* Rozmiar czcionki */
+    cursor: pointer;           /* Kursor wskazujący, że przycisk jest interaktywny */
+    transition: background-color 0.3s, border-color 0.3s; /* Płynne przejście przy najechaniu */
+    width: 100%;
+}
+
+/* Efekt najechania */
+#acceptSettings:hover {
+    background-color: white;  /* Zmiana tła na białe przy najechaniu */
+    color: black;             /* Zmiana koloru tekstu na czarny przy najechaniu */
+    border: 2px solid black;  /* Zmiana koloru ramki na czarny przy najechaniu */
+}
+
+.acceptSettingsText {
+    width: 99%;
+    background-color: #187520;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 20;
+    bottom: -100px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}

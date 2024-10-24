@@ -1,0 +1,98 @@
+/* Plansza */
+#game {
+    position: absolute;
+    width: 69%;
+    height: 60%;
+    border: 20px solid #fff;
+    overflow: hidden;
+    background-color: #000;
+    opacity: 0.3;
+    transition: opacity 0.5s ease, border-top-color 0.1s ease-out, border-bottom-color 0.1s ease-out;
+}
+
+#dot-line {
+    width: 3px;
+    height: 100%;
+    border-right: 3px dashed white;
+    margin: 0 auto;
+}
+
+.paddle {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#paddle1 {
+    left: 10px;
+}
+
+#paddle2 {
+    right: 10px;
+}
+
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    opacity: 1;
+}
+
+#score {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 64px;
+}
+
+#score1, #score2 {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 80px;
+    width: 50px;
+    text-align: center;
+}
+
+@keyframes leftGoalHit {
+    0% { border-left-color: #fff; }
+    50% { border-left-color: red; }
+    100% { border-left-color: #fff; }
+}
+
+@keyframes rightGoalHit {
+    0% { border-right-color: #fff; }
+    50% { border-right-color: red; }
+    100% { border-right-color: #fff; }
+}
+
+.goal-left-active {
+    animation: leftGoalHit 1s forwards;
+}
+
+.goal-right-active {
+    animation: rightGoalHit 1s forwards;
+}
+
+#countdown {
+    display: block;
+    color: white;
+    font-size: 500px;
+    position: absolute;
+    opacity: 0.6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 21;
+}

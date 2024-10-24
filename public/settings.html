@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONG - Ustawienia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/essentials.css">
+    <link rel="stylesheet" href="styles/attributes.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/favico.png">
+</head>
+<body>
+    <!-- Załadowanie sfx -->
+    <audio id="noise" src="assets/sounds/noise.wav" loop></audio>
+
+    <!-- Zawartość strony -->
+    <div class="content">
+        <canvas id="noiseCanvas"></canvas> <!-- Szum -->
+
+        <!-- Ustawienia -->
+        <div class="menuText glitch retro" data-text="Ustawienia" style="line-height: 0; font-size: 150px; transform: translateY(-40vh)">Ustawienia</div>
+
+        <div class="settingsContent retro">
+            <div class="settingsItem">
+                Prędkość piłki:
+                <input type="range" class="ball-speed" min="1" max="9" value="5">
+            </div>
+            <div class="settingsItem">
+                Czułość paletki gracza 1:
+                <input type="range" class="paddle1-sensitivity" min="1" max="9" value="5">
+            </div>
+            <div class="settingsItem">
+                Czułość paletki gracza 2:
+                <input type="range" class="paddle2-sensitivity" min="1" max="9" value="5">
+            </div>
+            <div class="settingsItem">
+                Poziom głośności muzyki:
+                <input type="range" class="music-volume" min="0" max="100" value="100">
+            </div>
+            <div class="settingsItem">
+                Wyłącz szum w tle:
+                <input type="checkbox" class="background-noise">
+            </div>
+            <div class="settingsItem">
+                Tryb minimalistyczny:
+                <input type="checkbox" class="minimalist-mode">
+            </div>
+            <div class="settingsItem">
+                Graj do ustalonej liczby punktów:
+                <input type="number" class="score-limit" min="0" max="100" value="0">
+            </div>
+            <div class="settingsItem" style="color: gray;">
+                Pozostaw 0, aby grać bez limitu. Maksymalna ilość punktów do ustawienia to 100.
+            </div>
+            <div class="settingsItem">
+                <button id="acceptSettings">ZASTOSUJ USTAWIENIA</button>
+                <div class="acceptSettingsText">Zapisano!</div>
+            </div>
+        </div>
+        
+        <!-- Informacja o wersji gry-->
+        <div class="info">
+            <p class="glitch retro" data-text="Wersja 1.0.0" title="Proszę o zgłaszanie błędów! Zgłoszenia poprawią stan gry!">Wersja 1.0.0</p>
+        </div>
+
+        <!-- Wyjście z ustawień -->
+        <a href="index.html"><i id="settings" class="fa-solid fa-gear" title="Gotowe?"></i></a>
+
+        <!-- Social media -->
+        <div class="wiktor retro glitch" data-text="Wiktor Gołąb 2024">Wiktor Gołąb 2024
+            <div class="wiktortext retro">Made with passion and <img src="assets/img/heart.png" id="heart"> !</div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://github.com/WiktorGolab" target="_blank" title="Github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/wiktor-go%C5%82%C4%85b-166029262/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Skrypty -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/whitenoise.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/essentials.js"></script>
+</body>
+</html>

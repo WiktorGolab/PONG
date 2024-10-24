@@ -1,0 +1,9 @@
+{
+  "ballSpeed": "5",
+  "paddle1Sensitivity": "5",
+  "paddle2Sensitivity": "5",
+  "musicVolume": "60",
+  "backgroundNoise": false,
+  "minimalistMode": false,
+  "scoreLimit": "0"
+}

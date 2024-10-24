@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONG</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/essentials.css">
+    <link rel="stylesheet" href="styles/attributes.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/favico.png">
+</head>
+<body>
+    <!-- Załadowanie dźwięków do gry -->
+    <audio id="pointSound" src="assets/sounds/point.wav"></audio>
+    <audio id="paddleSound" src="assets/sounds/paddle.wav"></audio>
+    <audio id="wallSound" src="assets/sounds/wall.wav"></audio>
+    <audio id="startSound" src="assets/sounds/start.wav"></audio>
+    <audio id="win" src="assets/sounds/win.wav"></audio>
+    <audio id="music" src="assets/sounds/music.mp3" loop></audio>
+
+    <!-- Zawartość strony -->
+    <div class="content">
+        <canvas id="noiseCanvas"></canvas> <!-- Szum -->
+
+        <!-- Menu startowe -->
+        <div class="menuText glitch" data-text="PONG">PONG</div>
+        <div id="menuOverlay" class="retro" style="display: none;">
+            <div class="fade square">
+                <p class="glitch minimal" style="font-size: 30px; line-height: 0.4;" data-text="Sterowanie:">Sterowanie:</p>
+                <p class="glitch minimal" style="font-size: 30px; line-height: 0.4;" data-text="Gracz 1 (Po lewej): W - Góra, S - Dół">Gracz 1 (Po lewej): W - Góra, S - Dół</p>
+                <p class="glitch minimal" style="font-size: 30px; line-height: 0.4;" data-text="Gracz 2 (Po Prawej): &#8679; - Góra, &#8681; - Dół">Gracz 2 (Po Prawej): &#8679; - Góra, &#8681; - Dół</p>
+            
+                <p class="glitch blink-start" data-text="Wciśnij ENTER, aby rozpocząć grę.">Wciśnij ENTER, aby rozpocząć grę.</p>
+            </div>
+        </div>
+
+        <!-- Menu pauzy -->
+        <div id="pauseOverlay" class="retro" style="display: none;">
+            <div class="square2">
+                <div class="pauseText glitch fade" style="font-size: 200px; line-height: 0.6;" data-text="PAUZA">PAUZA</div>
+                <p class="glitch blink-resume fade" data-text="Wciśnij ESC, aby wznowić grę.">Wciśnij ESC, aby wznowić grę.</p>
+            </div>
+
+            <button id="restart" class="retro">RESTART?</button>
+        </div>
+
+        <!-- Menu wygranej -->
+        <div id="winOverlay" class="retro" style="display: none;">
+            <img src="assets/img/trophy.png" style="transform: scale(0.4);">
+            <div class="square3">
+                <div id="winnerText" class="glitch" style="font-size: 70px; line-height: 0.8;"></div>
+                <p style="line-height: 0.5;">Ostateczny wynik gry:</p>
+                <div id="finalScore" style="line-height: 2;"></div>
+                <button id="restartWholeGame" class="retro">Zresetuj grę</button>
+            </div>
+        </div>
+
+        <!-- Gra -->
+        <div id="game">
+
+            <!-- Odliczanie -->
+            <div class="retro" id="countdown"></div>
+
+            <!-- Elementy gry -->
+            <div id="dot-line"></div>
+            <div id="paddle1" class="paddle"></div>
+            <div id="paddle2" class="paddle"></div>
+            <div id="ball"></div>
+            <div id="score">
+                <div id="score1" class="retro glitch">0</div>
+                <div id="score2" class="retro glitch">0</div>
+            </div>
+        </div>
+
+        <!-- Przełączniki dźwięków i ustawienia -->
+        <i id="settings" class="fa-solid fa-gear" title="Graj na własnych zasadach"></i>
+        <i id="musicToggle" class="fa-solid fa-music" title="Wyciszyć muzykę?"></i>
+        <i id="soundToggle" class="fas fa-volume-up" title="Wyciszyć dźwięki?"></i>
+
+        <!-- Informacja o możliwości zapauzowaniu i wyciszeniu gry -->
+        <div class="info minimal">
+            <p class="glitch retro" data-text="ESC - Pauza" title="Wciśnij klawisz Escape, aby zrobić pauzę">ESC - Pauza</p>
+            <p class="glitch retro" data-text="M - Przełącz wyciszenie muzyki" title="Wciśnij klawisz M, aby przełączyć wyciszenie muzyki">M - Przełącz wyciszenie muzyki</p>
+        </div>
+
+        <!-- Social media -->
+        <div class="wiktor retro glitch minimal" data-text="Wiktor Gołąb 2024">Wiktor Gołąb 2024
+            <div class="wiktortext retro">Made with passion and <img src="assets/img/heart.png" id="heart"> !</div>
+        </div>
+        
+        <div class="social-links minimal">
+            <a href="https://github.com/WiktorGolab" target="_blank" title="Github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/wiktor-go%C5%82%C4%85b-166029262/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Skrypty -->
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/whitenoise.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/essentials.js"></script>
+</body>
+</html>
