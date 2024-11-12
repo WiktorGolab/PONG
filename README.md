@@ -65,3 +65,6 @@ node server.js
 **Gracz 2 przyjmuje prawą część klawiatury:**
 - Arrow Up - Przemieszczenie się w górę,
 - Arrow Down - Przemieszczenie się w dół.
+
+### Github Pages obsługuje jedynie statyczne strony HTML, dlatego nie będzie ona w pełni działać.
+### Aby uzyskać najlepsze doświadczenie należy pobrać projekt.
