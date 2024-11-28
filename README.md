@@ -40,7 +40,7 @@ node server.js
 ###### Ustawienia w grze. Rozdzielczość ekranu: 2560x1440
 
 - Gra Pong w nowym wydaniu,
-- Nowe elementy wizualne w tym szum VHS,
+- Nowe elementy wizualne (w tym szum VHS),
 - Efekty dźwiękowe,
 - Autorska muzyka stworzona przeze mnie,
 - Opcja wyłączenia muzyki oraz dźwięków specjalnych,
